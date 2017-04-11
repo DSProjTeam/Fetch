@@ -12,6 +12,7 @@ public class FetchbyYiming {
         if (!json.containsKey("resourceTemplate")) {
             response.put("response", "error");
             response.put("errorMessage", "missing resourceTemplate");
+            //should add out.writeUTF(response.toString());out.flush()...and the same below.or reorganize the code.
         } else {
             JSONObject resourceTemplate = (JSONObject) json.get("resourceTemplate");
             if (!resourceTemplate.containsKey("uri") || !resourceTemplate.containsKey("channal")) {
